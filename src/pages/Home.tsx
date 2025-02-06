@@ -35,26 +35,7 @@ function Home() {
         <div className="max-w-7xl mx-auto px-4 pt-16 pb-24">
           <div className="relative text-center mb-24">
             <h1 className="text-6xl font-bold text-red-800 mb-4 relative">
-              <span className="inline-block transform -rotate-3">Welcome to</span>
-              <div className="relative inline-block mx-4">
-                <svg
-                  viewBox="0 0 200 100"
-                  className="absolute inset-0 w-full h-full -z-10 text-yellow-500"
-                  style={{ transform: 'scale(1.2) translateY(-10%)' }}
-                >
-                  <path
-                    d="M10,50 Q50,10 100,50 T190,50"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    className="animate-[dash_3s_ease-in-out_infinite]"
-                  />
-                </svg>
-                <span className="relative inline-block transform rotate-3 text-red-900">
-                  East Asian
-                </span>
-              </div>
-              <span className="inline-block transform -rotate-2">Society</span>
+              <span className="inline-block">Welcome to East Asian Society!</span>
             </h1>
           </div>
 
