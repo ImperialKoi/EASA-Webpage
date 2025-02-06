@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 1000;
+  }
+}
+
+.wave-container {
+  animation: slideWave linear infinite;
+  width: 200%;
+}
+
+.wave-1 {
+  animation: slideWave 7s linear infinite;
+}
+
+.wave-2 {
+  animation: slideWave 11s linear infinite;
+}
+
+.wave-3 {
+  animation: slideWave 13s linear infinite;
+}
+
+.wave-4 {
+  animation: slideWave 17s linear infinite;
+}
+
+@keyframes slideWave {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@layer utilities {
+  .animate-spin-slow {
+    animation: spin 8s linear infinite;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fee2e2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #dc2626;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b91c1c;
+}
+
+@keyframes float-left {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(-200px);
+  }
+}
+
+.animate-float-left {
+  animation: float-left 15s linear infinite;
+}
+
+@keyframes bob {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-15px) rotate(-2deg);
+  }
+  75% {
+    transform: translateY(15px) rotate(2deg);
+  }
+}
+
+.animate-bob {
+  animation: bob 5s ease-in-out infinite;
+}
