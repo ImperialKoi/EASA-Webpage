@@ -16,10 +16,10 @@ function App() {
         <nav className="bg-red-800 text-white shadow-lg">
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex justify-between items-center h-16">
-              <div className="flex items-center">
+              <div className="flex items-center transition-transform duration-200 hover:scale-125">
                 <Dragon className="h-8 w-8 text-yellow-500" />
                 <Link to="/">
-                  <span className="ml-2 text-xl font-bold inline-block transition-transform duration-200 hover:scale-125">
+                  <span className="ml-2 text-xl font-bold inline-block">
                     East Asian Society
                   </span>
                 </Link>
