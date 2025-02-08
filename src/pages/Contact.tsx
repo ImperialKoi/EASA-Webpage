@@ -51,7 +51,7 @@ function Contact() {
               Stay updated with our latest events and activities on social media!
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-red-800 hover:text-red-700">
+              <a href="https://www.instagram.com/aphs_easa/" className="text-red-800 hover:text-red-700">
                 Instagram
               </a>
               <a href="#" className="text-red-800 hover:text-red-700">
