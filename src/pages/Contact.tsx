@@ -24,7 +24,7 @@ function Contact() {
                 <Mail className="h-6 w-6 text-red-800 mr-4" />
                 <div>
                   <h3 className="font-bold">Email</h3>
-                  <p className="text-gray-600">eastasianstudentassociation@abbeypark.ca</p>
+                  <p className="text-gray-600">1pangchl2@hdsb.ca</p>
                 </div>
               </div>
               <div className="flex items-center">
