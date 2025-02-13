@@ -11,32 +11,32 @@ import Steven from '../images/Steven.png'
 // Sample boat data
 const boats = [
   {
+    name: "Steven",
+    imageUrl: `${Steven}`,
+    delay: 0,
+    bottom: '35%',
+    title: 'President'
+  },
+  {
     name: "Chloe",
     imageUrl: `${Chloe}`,
-    delay: 0,
+    delay: 4,
     bottom: '40%',
     title: 'Vice President'
   },
   {
     name: "Jolin",
     imageUrl: `${Jolin}`,
-    delay: 4,
+    delay: 8,
     bottom: '35%',
-    title: 'Exec'
+    title: 'Executive'
   },
   {
     name: "Melodie",
     imageUrl: `${Melodie}`,
-    delay: 8,
-    bottom: '40%',
-    title: 'Exec'
-  },
-  {
-    name: "Steven",
-    imageUrl: `${Steven}`,
     delay: 12,
-    bottom: '35%',
-    title: 'President'
+    bottom: '40%',
+    title: 'Executive'
   }
 ];
 
