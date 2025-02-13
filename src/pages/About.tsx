@@ -10,7 +10,7 @@ function About() {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
       <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-red-800 mb-4">About East Asian Society</h1>
+        <h1 className="text-4xl font-bold text-red-800 mb-4">About East Asian Student Association</h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
           We are a student-led organization dedicated to celebrating and sharing East Asian culture
           within the Abbey Park High School community.
@@ -28,7 +28,7 @@ function About() {
         <div className="flex flex-col justify-center">
           <h2 className="text-3xl font-bold text-red-800 mb-6">Our Mission</h2>
           <p className="text-gray-600 mb-6">
-            The East Asian Society aims to create a welcoming space where students can explore,
+            The East Asian Student Association aims to create a welcoming space where students can explore,
             celebrate, and share East Asian cultures. We promote cultural understanding through
             various activities, events, and educational programs.
           </p>

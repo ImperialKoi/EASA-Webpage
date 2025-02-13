@@ -11,7 +11,7 @@ function Contact() {
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-red-800 mb-4">Contact Us</h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Have questions about the East Asian Society? We'd love to hear from you!
+          Have questions about the East Asian Student Association? We'd love to hear from you!
         </p>
       </div>
 
@@ -24,7 +24,7 @@ function Contact() {
                 <Mail className="h-6 w-6 text-red-800 mr-4" />
                 <div>
                   <h3 className="font-bold">Email</h3>
-                  <p className="text-gray-600">eastasiansociety@abbeypark.ca</p>
+                  <p className="text-gray-600">eastasianstudentassociation@abbeypark.ca</p>
                 </div>
               </div>
               <div className="flex items-center">

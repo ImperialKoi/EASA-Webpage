@@ -80,7 +80,7 @@ function Home() {
             {/* Hero Content */}
             <div className="absolute inset-0 flex flex-col items-center justify-center text-white z-10 px-4">
               <h1 className="text-6xl md:text-7xl font-bold mb-6 text-center leading-tight">
-                East Asian Society
+                East Asian Student Association
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-center max-w-2xl leading-relaxed text-gray-200">
                 Join us in celebrating the rich cultures, traditions, and modern experiences of East Asia
@@ -193,7 +193,7 @@ function Home() {
           <div className="max-w-7xl mx-auto px-4 py-6">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="mb-4 md:mb-0">
-                <h3 className="text-lg font-bold">East Asian Society</h3>
+                <h3 className="text-lg font-bold">East Asian Student Association</h3>
                 <p className="text-sm">Abbey Park High School</p>
               </div>
               <div className="text-sm">
