@@ -10,33 +10,16 @@ interface BoatProps {
 }
 
 export function Boat({ name, imageUrl, delay, bottom, title }: BoatProps) {
+
   const [isVisible, setIsVisible] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Check if we're on mobile
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    // Initial check
-    checkMobile();
-
-    // Listen for resize events
-    window.addEventListener('resize', checkMobile);
-
-    // Calculate actual delay - double it for mobile
-    const actualDelay = isMobile ? delay * 2 : delay;
-
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, actualDelay * 1000);
+    }, delay * 1000); // Convert delay to milliseconds
 
-    return () => {
-      clearTimeout(timer);
-      window.removeEventListener('resize', checkMobile);
-    };
-  }, [delay, isMobile]);
+    return () => clearTimeout(timer);
+  }, [delay]);
 
   return (
     <div 
@@ -44,14 +27,15 @@ export function Boat({ name, imageUrl, delay, bottom, title }: BoatProps) {
         isVisible ? 'opacity-100' : 'opacity-0'
       } animate-float-left`}
       style={{ 
-        animationDelay: `${isMobile ? delay * 2 : delay}s`,
+        animationDelay: `${delay}s`,
         bottom: bottom,
       }}
+      
     >
       <div className="relative">
         {/* Person's Image - Now behind the boat */}
         <div className="absolute left-[120px] top-[50px] -translate-x-1 z-50 animate-bob">
-          <div className="relative w-[120px] h-[120px] md:w-[120px] md:h-[120px] sm:w-[100px] sm:h-[100px]">
+          <div className="relative w-[120px] h-[120px]">
             <img
               src={imageUrl}
               alt={name}
@@ -64,7 +48,7 @@ export function Boat({ name, imageUrl, delay, bottom, title }: BoatProps) {
         <img
           src={boat}
           alt="Boat"
-          className="w-80 md:w-80 sm:w-64 h-auto transform scale-x-100 relative z-50 animate-bob"
+          className="w-80 h-auto transform scale-x-100 relative z-50 animate-bob"
         />
         
         {/* Name - Stays on top */}
