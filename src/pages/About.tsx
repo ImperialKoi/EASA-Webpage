@@ -1,12 +1,45 @@
-import React from 'react';
-import { Heart, Users, Globe2 } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Heart, Users, Globe2, ChevronLeft, ChevronRight } from 'lucide-react';
 import members from '../images/members.jpg'
+import backend from '../images/backend.jpg'
+import team from '../images/our-team.jpg'
+import mcs from '../images/mcs.jpg'
 import Chloe from '../images/Chloe.png'
 import Jolin from '../images/Jolin.png'
 import Melodie from '../images/Melodie.png'
 import Steven from '../images/Steven.png'
 
+const images = [
+  members,
+  team,
+  backend,
+  mcs
+];
+
+
 function About() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 5000); // Change image every 5 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+  
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
       <div className="text-center mb-16">
@@ -18,12 +51,53 @@ function About() {
       </div>
 
       <div className="grid md:grid-cols-2 gap-12 mb-16">
-        <div>
-          <img
-            src={members}
-            alt="Club members"
-            className="rounded-xl shadow-lg w-full h-[400px] object-cover"
-          />
+      <div className="relative h-[400px] rounded-xl overflow-hidden shadow-lg">
+          {images.map((image, index) => (
+            <div
+              key={index}
+              className={`absolute w-full h-full transition-opacity duration-500 ease-in-out ${
+                index === currentIndex ? 'opacity-100' : 'opacity-0'
+              }`}
+            >
+              <img
+                src={image}
+                alt={`Slide ${index + 1}`}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          ))}
+          
+          {/* Navigation Arrows */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg transition-all"
+            aria-label="Previous slide"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+          <button
+            onClick={nextSlide}
+            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg transition-all"
+            aria-label="Next slide"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+
+          {/* Slide Indicators */}
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+            {images.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-2 h-2 rounded-full transition-all ${
+                  index === currentIndex 
+                    ? 'bg-white w-4' 
+                    : 'bg-white/50 hover:bg-white/80'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
         <div className="flex flex-col justify-center">
           <h2 className="text-3xl font-bold text-red-800 mb-6">Our Mission</h2>
