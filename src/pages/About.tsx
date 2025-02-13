@@ -51,7 +51,7 @@ function About() {
       </div>
 
       <div className="grid md:grid-cols-2 gap-12 mb-16">
-      <div className="relative h-[400px] rounded-xl overflow-hidden shadow-lg">
+      <div className="relative h-[250px] md:h-[400px] rounded-xl overflow-hidden shadow-lg">
           {images.map((image, index) => (
             <div
               key={index}
