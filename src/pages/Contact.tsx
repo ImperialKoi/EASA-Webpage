@@ -4,7 +4,6 @@ import { Mail, MapPin, Clock, Send } from 'lucide-react';
 function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
   };
 
   return (

@@ -119,3 +119,47 @@
 .animate-bob {
   animation: bob 5s ease-in-out infinite;
 }
+
+@keyframes slideOutFade {
+  0% { 
+    transform: translateX(0) translateY(0);
+    opacity: 1;
+  }
+  100% { 
+    transform: translateX(var(--slide-x)) translateY(var(--slide-y));
+    opacity: 0;
+  }
+}
+
+@keyframes wandWave {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  25% { transform: translate(-50%, -50%) rotate(-20deg); }
+  75% { transform: translate(-50%, -50%) rotate(20deg); }
+  100% { transform: translate(-50%, -50%) rotate(0deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.slide-out-fade {
+  animation: slideOutFade 1.5s forwards;
+}
+
+.animate-wand {
+  animation: wandWave 1s infinite;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1.5s forwards;
+}
+
+.animate-scale-up {
+  animation: scaleUp 1.5s forwards;
+}

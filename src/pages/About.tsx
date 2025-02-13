@@ -1,5 +1,10 @@
 import React from 'react';
 import { Heart, Users, Globe2 } from 'lucide-react';
+import members from '../images/members.jpg'
+import Chloe from '../images/Chloe.png'
+import Jolin from '../images/Jolin.png'
+import Melodie from '../images/Melodie.png'
+import Steven from '../images/Steven.png'
 
 function About() {
   return (
@@ -15,7 +20,7 @@ function About() {
       <div className="grid md:grid-cols-2 gap-12 mb-16">
         <div>
           <img
-            src="https://images.unsplash.com/photo-1516307365426-d1d4e3943454?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+            src={members}
             alt="Club members"
             className="rounded-xl shadow-lg w-full h-[400px] object-cover"
           />
@@ -44,33 +49,42 @@ function About() {
 
       <div className="bg-white rounded-xl shadow-lg p-8 mb-16">
         <h2 className="text-3xl font-bold text-red-800 mb-8 text-center">Meet Our Team</h2>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-4 gap-8 mt-4">
           <div className="text-center">
             <img
-              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
+              src={Steven}
               alt="President"
               className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
             />
-            <h3 className="font-bold text-lg">Sarah Chen</h3>
+            <h3 className="font-bold text-lg">Steven</h3>
             <p className="text-red-800">President</p>
           </div>
           <div className="text-center">
             <img
-              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
+              src={Chloe}
               alt="Vice President"
               className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
             />
-            <h3 className="font-bold text-lg">David Kim</h3>
+            <h3 className="font-bold text-lg">Chloe</h3>
             <p className="text-red-800">Vice President</p>
           </div>
           <div className="text-center">
             <img
-              src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
-              alt="Events Coordinator"
+              src={Jolin}
+              alt="Vice President"
               className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
             />
-            <h3 className="font-bold text-lg">Emily Wong</h3>
-            <p className="text-red-800">Events Coordinator</p>
+            <h3 className="font-bold text-lg">Jolin</h3>
+            <p className="text-red-800">Executive</p>
+          </div>
+          <div className="text-center">
+            <img
+              src={Melodie}
+              alt="Executive"
+              className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+            />
+            <h3 className="font-bold text-lg">Melodie</h3>
+            <p className="text-red-800">Executive</p>
           </div>
         </div>
       </div>
@@ -81,7 +95,7 @@ function About() {
           We meet every Wednesday after school in Room 204. New members are always welcome!
         </p>
         <button className="bg-red-800 text-white px-8 py-4 rounded-lg hover:bg-red-700 transition-colors text-lg">
-          Become a Member
+          Apply To Be An Executive
         </button>
       </div>
     </div>

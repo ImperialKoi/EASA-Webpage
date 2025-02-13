@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import boat from './boat.png'
+import boat from '../images/boat.png'
 
 interface BoatProps {
   name: string;
@@ -34,8 +34,8 @@ export function Boat({ name, imageUrl, delay, bottom, title }: BoatProps) {
     >
       <div className="relative">
         {/* Person's Image - Now behind the boat */}
-        <div className="absolute left-1/2 top-20 -translate-x-1 z-50 animate-bob">
-          <div className="relative w-20 h-20">
+        <div className="absolute left-[120px] top-[50px] -translate-x-1 z-50 animate-bob">
+          <div className="relative w-[120px] h-[120px]">
             <img
               src={imageUrl}
               alt={name}

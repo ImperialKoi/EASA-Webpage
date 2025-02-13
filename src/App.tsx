@@ -1,32 +1,13 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Menu, X, Hexagon as Dragon } from 'lucide-react';
-import { Canvas } from '@react-three/fiber';
 import Home from './pages/Home';
 import Events from './pages/Events';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import Loading from './components/LoadingScene'
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  //const [isLoading, setIsLoading] = React.useState(true); // Add loading state
-
-  // Simulate a loading delay before showing the homepage
-  //React.useEffect(() => {
-    //const timer = setTimeout(() => {
-      //setIsLoading(false);
-    //}, 2000); // Adjust time as needed (2000ms = 2 seconds)
-    //return () => clearTimeout(timer);
-  //}, []);
-
-  //if (isLoading) {
-    //return <Canvas>
-        //<Suspense fallback={null}>
-          //<Loading />
-        //</Suspense>
-      //</Canvas>; // Show loading screen while loading
-  //}
 
   return (
     <Router>

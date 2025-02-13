@@ -2,30 +2,41 @@ import React, { useEffect, useState } from 'react';
 import { Calendar, Users, Globe2 } from 'lucide-react';
 import { Boat } from '../components/Boat';
 import { Lanterns } from '../components/Lanterns';
-import image from './image.png';
+import background from '../images/background.jpg';
+import Chloe from '../images/Chloe.png'
+import Jolin from '../images/Jolin.png'
+import Melodie from '../images/Melodie.png'
+import Steven from '../images/Steven.png'
 
 // Sample boat data
 const boats = [
   {
-    name: "Sarah Chen",
-    imageUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
+    name: "Chloe",
+    imageUrl: `${Chloe}`,
     delay: 0,
     bottom: '40%',
-    title: 'Exec'
+    title: 'Vice President'
   },
   {
-    name: "David Kim",
-    imageUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
+    name: "Jolin",
+    imageUrl: `${Jolin}`,
     delay: 4,
     bottom: '35%',
     title: 'Exec'
   },
   {
-    name: "Emily Wong",
-    imageUrl: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
+    name: "Melodie",
+    imageUrl: `${Melodie}`,
     delay: 8,
     bottom: '40%',
     title: 'Exec'
+  },
+  {
+    name: "Steven",
+    imageUrl: `${Steven}`,
+    delay: 12,
+    bottom: '35%',
+    title: 'President'
   }
 ];
 
@@ -57,7 +68,7 @@ function Home() {
               }}
             >
               <img 
-                src={image} 
+                src={background} 
                 alt="Header Background" 
                 className="w-full h-full object-cover"
                 style={{
