@@ -15,28 +15,28 @@ const boats = [
     imageUrl: `${Steven}`,
     delay: 0,
     bottom: '35%',
-    title: 'President'
+    title: 'Co-President'
   },
   {
     name: "Chloe",
     imageUrl: `${Chloe}`,
     delay: 4,
     bottom: '40%',
-    title: 'Vice President'
+    title: 'Co-Vice President'
   },
   {
     name: "Jolin",
     imageUrl: `${Jolin}`,
     delay: 8,
     bottom: '35%',
-    title: 'Executive'
+    title: 'Co-President'
   },
   {
     name: "Melodie",
     imageUrl: `${Melodie}`,
     delay: 12,
     bottom: '40%',
-    title: 'Executive'
+    title: 'Co-Vice President'
   }
 ];
 
