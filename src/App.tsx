@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Events from './pages/Events';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import icon from './images/icon.png'
 
 function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -20,7 +21,7 @@ function Navigation() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center transition-transform duration-200 hover:scale-125">
-            <Dragon className="h-8 w-8 text-yellow-500" />
+            <img src={icon} className="h-8 w-8 text-yellow-500" />
             <Link to="/">
               <span className="ml-2 text-xl font-bold inline-block">
                 East Asian Society
