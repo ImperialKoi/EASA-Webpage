@@ -3,8 +3,29 @@ import { Mail, MapPin, Clock, Send } from 'lucide-react';
 import background from '../images/Background3.jpg'
 
 function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [id]: value
+    }));
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    const mailtoLink = `mailto:1xudan4@hdsb.ca?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
+      `Dear EASA, \n ${formData.message} \n ${formData.name}`
+    )}`;
+    
+    window.location.href = mailtoLink;
   };
 
   const [scrollY, setScrollY] = useState(0);
@@ -89,15 +110,8 @@ function Contact() {
                   <input
                     type="text"
                     id="name"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-800 focus:border-transparent"
-                    required
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-gray-700 mb-2">Email</label>
-                  <input
-                    type="email"
-                    id="email"
+                    value={formData.name}
+                    onChange={handleChange}
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-800 focus:border-transparent"
                     required
                   />
@@ -107,6 +121,8 @@ function Contact() {
                   <input
                     type="text"
                     id="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-800 focus:border-transparent"
                     required
                   />
@@ -116,6 +132,8 @@ function Contact() {
                   <textarea
                     id="message"
                     rows={5}
+                    value={formData.message}
+                    onChange={handleChange}
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-800 focus:border-transparent"
                     required
                   ></textarea>

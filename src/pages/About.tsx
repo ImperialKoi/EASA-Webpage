@@ -190,7 +190,7 @@ function About() {
             <p className="text-gray-200 mb-8">
               We meet every Wednesday after school in Room 204. New members are always welcome!
             </p>
-            <button className="bg-red-800 text-white px-8 py-4 rounded-lg hover:bg-red-700 transition-colors text-lg">
+            <button className="bg-red-800 text-white px-8 py-4 rounded-lg hover:bg-red-700 transition-colors text-lg" onClick={() => (window.location.href = "https://docs.google.com/forms/d/1U5jVxUf6B-TFbKBiKCEDBn0JJO5HTmPO3WPuO40YX8s/viewform?edit_requested=true#settings")}>
               Apply To Be An Executive
             </button>
           </div>
