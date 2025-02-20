@@ -24,7 +24,7 @@ function Navigation() {
             <img src={icon} className="h-8 w-8 text-yellow-500" />
             <Link to="/">
               <span className="ml-2 text-xl font-bold inline-block">
-                East Asian Society
+                East Asian Student Association
               </span>
             </Link>
           </div>
