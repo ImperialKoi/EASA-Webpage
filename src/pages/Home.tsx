@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Calendar, Users, Globe2 } from 'lucide-react';
 import { Boat } from '../components/Boat';
 import { Lanterns } from '../components/Lanterns';
@@ -41,6 +42,8 @@ const boats = [
 ];
 
 function Home() {
+  const navigate = useNavigate();
+
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
@@ -86,10 +89,10 @@ function Home() {
                 Join us in celebrating the rich cultures, traditions, and modern experiences of East Asia
               </p>
               <div className="flex gap-4">
-                <button className="bg-red-800 hover:bg-red-700 text-white px-8 py-3 rounded-full font-bold transform hover:scale-105 transition-all duration-300 shadow-lg">
+                <button className="bg-red-800 hover:bg-red-700 text-white px-8 py-3 rounded-full font-bold transform hover:scale-105 transition-all duration-300 shadow-lg" onClick={() => navigate("/events")}>
                   Join Now
                 </button>
-                <button className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white px-8 py-3 rounded-full font-bold transform hover:scale-105 transition-all duration-300 shadow-lg">
+                <button className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white px-8 py-3 rounded-full font-bold transform hover:scale-105 transition-all duration-300 shadow-lg" onClick={() => navigate("/about")}                >
                   Learn More
                 </button>
               </div>
