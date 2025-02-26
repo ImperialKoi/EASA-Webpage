@@ -11,7 +11,7 @@ export function Lanterns() {
     <div 
       className="absolute w-full z-50"
       style={{
-        top: 'calc(80vh + 3rem)',
+        top: '46.3rem',
       }}
     >
       {/* Strings using SVG - curved lines meeting in center */}
