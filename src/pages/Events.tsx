@@ -52,7 +52,7 @@ function Events() {
                     <img
                       src={event.image}
                       alt={event.title}
-                      className="w-full h-full object-cover h-[22rem]"
+                      className="w-full h-full object-cover h-[21rem]"
                     />
                   </div>
                   <div className="md:w-2/3 p-8">

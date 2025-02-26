@@ -134,11 +134,11 @@ function Home() {
                   </div>
                 </div>
                 <div className="md:w-1/2 p-8">
-                  <h2 className="text-3xl font-bold mb-4 text-red-800">Lunar New Year Party! 🐲</h2>
+                  <h2 className="text-3xl font-bold mb-4 text-red-800">Weekly EASA meetings! 🐲</h2>
                   <p className="text-gray-600 mb-6 text-lg">
-                    Get ready for the most epic celebration of the year! We've got:
+                    Meet us in room 204 for a fun time surrounded by others of our culture!:
                     <ul className="list-disc list-inside mt-2 space-y-2">
-                      <li>Amazing Performances 🎭</li>
+                      <li>Amazing Activities 🎭</li>
                       <li>Delicious Snacks 🥟</li>
                       <li>Fun Games 🎮</li>
                       <li>Cool Prizes 🎁</li>
