@@ -8,6 +8,7 @@ import Chloe from '../images/Chloe.png'
 import Jolin from '../images/Jolin.png'
 import Melodie from '../images/Melodie.png'
 import Steven from '../images/Steven.png'
+import members from '../images/members.jpg'
 
 // Sample boat data
 const boats = [
@@ -125,7 +126,7 @@ function Home() {
               <div className="md:flex">
                 <div className="md:w-1/2 relative overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                    src={members}
                     alt="Lunar New Year Celebration"
                     className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
                   />
